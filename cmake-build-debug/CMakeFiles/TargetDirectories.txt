@@ -1,3 +1,0 @@
-/mnt/d/Facultate/Anul_2/Proiect POO/TEMA1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Facultate/Anul_2/Proiect POO/TEMA1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Facultate/Anul_2/Proiect POO/TEMA1/cmake-build-debug/CMakeFiles/TEMA1.dir

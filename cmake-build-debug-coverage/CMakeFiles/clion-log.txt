@@ -1,4 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage -G "CodeBlocks - Unix Makefiles" "/mnt/d/Facultate/Anul_2/Proiect POO/TEMA1"
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/d/Facultate/Anul_2/Proiect POO/TEMA1/cmake-build-debug-coverage
