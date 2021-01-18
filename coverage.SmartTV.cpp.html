@@ -269,17 +269,17 @@
             <td class="headerValue">SmartTV.cpp</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">25</td>
-            <td class="headerTableEntry">45</td>
-            <td class="headerTableEntry" style="background-color:LightPink">55.6 %</td>
+            <td class="headerTableEntry">24</td>
+            <td class="headerTableEntry">44</td>
+            <td class="headerTableEntry" style="background-color:LightPink">54.5 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2020-12-07 15:55:34</td>
+            <td class="headerValue">2021-01-18 23:22:03</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">7</td>
-            <td class="headerTableEntry">14</td>
+            <td class="headerTableEntry">5</td>
+            <td class="headerTableEntry">10</td>
             <td class="headerTableEntry" style="background-color:LightPink">50.0 %</td>
           </tr>
         </table>
@@ -329,29 +329,29 @@
 
     <tr>
     <td align="right" class="lineno"><pre>5</pre></td>
-    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span><span class="takenBranch" title="Branch 5 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 6 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>SmartTV::SmartTV(const char versOs[15], const char conex[15], const char nume[20], int nrPorturiHdmi, const char tunerDigital[7], const Ecran &amp;e) : Gadget(versOs, conex), _nrPorturiHDMI(new int (nrPorturiHdmi)), _e(e){</pre></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 2 taken 3 times">&check;</span><span class="notTakenBranch" title="Branch 3 not taken">&cross;</span></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
+    <td align="left" class="src coveredLine"><pre>SmartTV::SmartTV(const char versOs[15], const char conex[15], const char nume[20], int nrPorturiHdmi, const char tunerDigital[7], const Ecran &amp;e) : Gadget(versOs, conex), _nrPorturiHDMI(nrPorturiHdmi), _e(e){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>6</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
     <td align="left" class="src coveredLine"><pre>    strcpy(_nume,nume);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>7</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
     <td align="left" class="src coveredLine"><pre>    strcpy(TunerDigital,tunerDigital);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>8</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>1</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
@@ -364,9 +364,9 @@
 
     <tr>
     <td align="right" class="lineno"><pre>10</pre></td>
-    <td align="right" class="linebranch"><span class="notTakenBranch" title="Branch 8 not taken">&cross;</span><span class="takenBranch" title="Branch 4 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span><span class="takenBranch" title="Branch 7 taken 1 times">&check;</span><br/></td>
+    <td align="right" class="linebranch"><span class="takenBranch" title="Branch 4 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 5 not taken">&cross;</span></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>SmartTV::SmartTV(const SmartTV &amp;ob) : Gadget(ob.getOs(), ob.getConexiune()),_nrPorturiHDMI(new int (*ob._nrPorturiHDMI)) {</pre></td>
+    <td align="left" class="src coveredLine"><pre>SmartTV::SmartTV(const SmartTV &amp;ob) : Gadget(ob.getOs(), ob.getConexiune()),_nrPorturiHDMI(ob._nrPorturiHDMI) {</pre></td>
     </tr>
 
     <tr>
@@ -478,7 +478,7 @@
     <td align="right" class="lineno"><pre>26</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>int* SmartTV::getNrPorturiHdmi() const {</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>int SmartTV::getNrPorturiHdmi() const {</pre></td>
     </tr>
 
     <tr>
@@ -513,7 +513,7 @@
     <td align="right" class="lineno"><pre>31</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount coveredLine"><pre>1</pre></td>
-    <td align="left" class="src coveredLine"><pre>    *_nrPorturiHDMI = nrPorturiHdmi;</pre></td>
+    <td align="left" class="src coveredLine"><pre>    _nrPorturiHDMI = nrPorturiHdmi;</pre></td>
     </tr>
 
     <tr>
@@ -674,7 +674,7 @@
     <td align="right" class="lineno"><pre>54</pre></td>
     <td align="right" class="linebranch"></td>
     <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    *this-&gt;_nrPorturiHDMI =*ob._nrPorturiHDMI;</pre></td>
+    <td align="left" class="src uncoveredLine"><pre>    this-&gt;_nrPorturiHDMI =ob._nrPorturiHDMI;</pre></td>
     </tr>
 
     <tr>
@@ -715,7 +715,7 @@
     <tr>
     <td align="right" class="lineno"><pre>60</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
     <td align="left" class="src coveredLine"><pre>ostream &amp;operator&lt;&lt;(ostream &amp;os, const SmartTV &amp;tv) {</pre></td>
     </tr>
 
@@ -729,14 +729,14 @@
     <tr>
     <td align="right" class="lineno"><pre>62</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
-    <td align="left" class="src coveredLine"><pre>       &lt;&lt; ", Numar de Porturi HDMI: " &lt;&lt; *tv._nrPorturiHDMI &lt;&lt; ", Tuner Digital: "&lt;&lt; tv.TunerDigital &lt;&lt; ", Ecran: " &lt;&lt; tv._e &lt;&lt; endl &lt;&lt; endl;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
+    <td align="left" class="src coveredLine"><pre>       &lt;&lt; ", Numar de Porturi HDMI: " &lt;&lt; tv._nrPorturiHDMI &lt;&lt; ", Tuner Digital: "&lt;&lt; tv.TunerDigital &lt;&lt; ", Ecran: " &lt;&lt; tv._e &lt;&lt; endl &lt;&lt; endl;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>63</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>3</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
     <td align="left" class="src coveredLine"><pre>    return os;</pre></td>
     </tr>
 
@@ -785,28 +785,21 @@
     <tr>
     <td align="right" class="lineno"><pre>70</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>8</pre></td>
     <td align="left" class="src coveredLine"><pre>SmartTV::~SmartTV() {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>71</pre></td>
     <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
-    <td align="left" class="src coveredLine"><pre>    delete _nrPorturiHDMI;</pre></td>
-    </tr>
-
-    <tr>
-    <td align="right" class="lineno"><pre>72</pre></td>
-    <td align="right" class="linebranch"></td>
-    <td align="right" class="linecount coveredLine"><pre>2</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>4</pre></td>
     <td align="left" class="src coveredLine"><pre>    cout &lt;&lt; "S-a sters Obiectul " &lt;&lt; _nume &lt;&lt; endl &lt;&lt; endl;</pre></td>
     </tr>
 
     <tr>
-    <td align="right" class="lineno"><pre>73</pre></td>
+    <td align="right" class="lineno"><pre>72</pre></td>
     <td align="right" class="linebranch"><span class="takenBranch" title="Branch 1 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 2 not taken">&cross;</span><span class="takenBranch" title="Branch 3 taken 1 times">&check;</span><span class="notTakenBranch" title="Branch 4 not taken">&cross;</span><br/></td>
-    <td align="right" class="linecount coveredLine"><pre>5</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>7</pre></td>
     <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
