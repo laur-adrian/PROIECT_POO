@@ -2,18 +2,18 @@
 
 using namespace std;
 
-Ecran::Ecran(int diag,const char tehn_ecr[15],const char rez[6]): _diag(std::unique_ptr<int>(new int(diag))){
+Ecran::Ecran(int diag,const char tehn_ecr[15],const char rez[6]): _diag(diag){
     strcpy(tehnologie_ecran,tehn_ecr);
     strcpy(rezolutie,rez);
 }
 
-Ecran::Ecran (const Ecran & ob): _diag(std::unique_ptr<int>(new int (*ob._diag))){
+Ecran::Ecran (const Ecran & ob): _diag(ob._diag) {
     strcpy(this->tehnologie_ecran,ob.tehnologie_ecran);
     strcpy(this->rezolutie,ob.rezolutie);
 }
 
 int Ecran::getDiag() const {
-    return *_diag;
+    return _diag;
 }
 
 const char* Ecran::getTehnologieEcran() const {
@@ -25,7 +25,7 @@ const char* Ecran::getRezolutie() const {
 }
 
 void Ecran::setDiag(int diag) {
-    *_diag = diag;
+    _diag = diag;
 }
 
 void Ecran::setTehnologieEcran(const char *tehnologieecran){
@@ -37,19 +37,19 @@ void Ecran::setRezolutie(const char *rez){
 }
 
 Ecran& Ecran::operator=(const Ecran &ob){
-    *_diag=*ob._diag;
+    _diag=ob._diag;
     strcpy(tehnologie_ecran,ob.tehnologie_ecran);
     strcpy(rezolutie,ob.rezolutie);
     return *this;
 }
 
 ostream&operator<<(ostream &os, const Ecran &ecran) {
-    os << "Diagonala: " << *ecran._diag << " Tehnologie Ecran: " << ecran.tehnologie_ecran << " Rezolutie Ecran: "
+    os << "Diagonala: " << ecran._diag << " Tehnologie Ecran: " << ecran.tehnologie_ecran << " Rezolutie Ecran: "
        << ecran.rezolutie;
     return os;
 }
 
 
 Ecran::~Ecran(){
-    cout << "S-a sters Ecranul " << tehnologie_ecran << " cu diagonala " << *_diag << " si rezolutia " << rezolutie << endl << endl ;
+    cout << "S-a sters Ecranul " << tehnologie_ecran << " cu diagonala " << _diag << " si rezolutia " << rezolutie << endl << endl ;
 }

@@ -12,7 +12,7 @@ class SmartTV : public Gadget{
 
 private:
     char _nume[20];
-    int *_nrPorturiHDMI;
+    int _nrPorturiHDMI;
     char TunerDigital[7];
     Ecran _e=Ecran(0,"", "");
 
@@ -25,7 +25,7 @@ public:
 
     void setNume(const char nume[20]);
 
-    int *getNrPorturiHdmi() const;
+    int getNrPorturiHdmi() const;
 
     void setNrPorturiHdmi(int nrPorturiHdmi);
 

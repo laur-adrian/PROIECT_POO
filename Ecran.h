@@ -9,7 +9,7 @@
 class Ecran{
 
 private:
-    std::unique_ptr<int> _diag;
+    int _diag;
     char tehnologie_ecran[15];
     char rezolutie[10];
 

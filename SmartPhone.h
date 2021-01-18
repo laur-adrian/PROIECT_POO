@@ -12,9 +12,9 @@ class SmartPhone : public Gadget {
 
 private:
     char _nume[20];
-    int *_spatiuStocare;
-    int *_memorie;
-    int *_capacitatebaterie;
+    int _spatiuStocare;
+    int _memorie;
+    int _capacitatebaterie;
     Ecran _e = Ecran(0, "", "");
 
 public:
@@ -25,11 +25,11 @@ public:
 
     const char *getNume() const;
 
-    int *getSpatiuStocare() const;
+    int getSpatiuStocare() const;
 
-    int *getMemorie() const;
+    int getMemorie() const;
 
-    int *getCapacitatebaterie() const;
+    int getCapacitatebaterie() const;
 
     const Ecran &getE() const;
 
