@@ -3,6 +3,8 @@
 #include "Ecran.h"
 #include "SmartPhone.h"
 #include "SmartTV.h"
+#include "SmartPhone_factory.h"
+#include "SmartTV_factory.h"
 
 using namespace std;
 
@@ -12,6 +14,8 @@ int main() {
     Ecran e2=Ecran(e);
     e2.setDiag(32);
     e2.setTehnologieEcran("LED");
+
+    cout << "SmartPhone:\n";
 
     SmartPhone p1=SmartPhone("Android10","WiFi 802.11 b/g/n","Huawei P20",64,4,2500,e);
     SmartPhone p2=SmartPhone("","","",0,0,0,e);
@@ -28,6 +32,13 @@ int main() {
     }
     p1.printCaracteristici();
 
+    SmartPhone p3 = SmartPhone_factory::HuaweiP20Lite();
+    SmartPhone p4 = SmartPhone_factory::XiaomiRedmi9();
+    cout<<"Design patterns SmartPhone: \n" << p3;
+    cout<< p4;
+
+    cout<< "SmartTV:\n";
+
     SmartTV tv1=SmartTV("Android9","cablu","Samsung SmartTV",2,"DVB-C",e2);
     cout<<tv1;
     tv1.setConexiune("Cablu si Wifi");
@@ -37,6 +48,12 @@ int main() {
     tv2.setNrPorturiHdmi(3);
     tv2.setConexiune("WiFi");
     tv2.printCaracteristici();
+
+    SmartTV tv3=SmartTV_factory::HisenseTv();
+    SmartTV tv4=SmartTV_factory::PhilipsTv();
+
+    cout<<"Design patterns SmartTv:\n" << tv3;
+    cout << tv4;
 
     return 0;
 }
