@@ -47,7 +47,11 @@ int main() {
     tv2.setNume("LG");
     tv2.setNrPorturiHdmi(3);
     tv2.setConexiune("WiFi");
-    tv2.printCaracteristici();
+
+    cout<< "Funcție virtuală apelată prin pointer la clasa de bază\n";
+    Gadget *g=&tv2;
+    g->printCaracteristici();
+    cout << "\n";
 
     SmartTV tv3=SmartTV_factory::HisenseTv();
     SmartTV tv4=SmartTV_factory::PhilipsTv();
